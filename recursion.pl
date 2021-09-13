@@ -91,8 +91,8 @@ promedio_parcial(X,N,R) :- is_list(X),          %Verifica que tenemos los elemen
 %fibonacci(<n>,<resultado>).
 %Verdadero si <resultado> es el número Fibonacci correspondiente a <n>.
 
-fibonacci(0,1) :- !.                                  %Casos iniciales de fibonacci.
-fibonacci(1,1) :- !.
+fibonacci(1,0) :- !.                                  %Casos iniciales de fibonacci.
+fibonacci(2,1) :- !.
 fibonacci(X,R) :- number(X), X > 0,                   %Verifica que es un número positivo.
                   X1 is X-1, X2 is X-2,               %Crea una variable X1 = X-1 y X2 = X-2.
                   fibonacci(X1,R1), fibonacci(X2,R2), %Calcula fibonacci de X1 y X2
